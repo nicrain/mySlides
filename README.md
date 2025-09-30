@@ -20,6 +20,11 @@ style: |
     font-size: 0.9em;
   }
 ---
+<style scoped>
+section {
+  display: block !important; /* 关键：重置为默认的 block 布局 */
+}
+</style>
 
 # <!--fit--> Système IA Portable d'Assistance Environnementale
 
@@ -96,7 +101,11 @@ Un **système** d'assistance environnementale, conçu spécifiquement pour les p
     - L'option "porté sur le torse" offre une stabilité naturelle supérieure.
 
 ---
+<!-- _class: lead -->
 
 # <!--fit--> Merci pour votre attention
 
 ### &nbsp;
+
+---
+<!-- 下一页恢复正常 -->
