@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: gaia
+theme: uncover
 paginate: true
 style: |
   /* 全局减小字体大小，解决内容溢出问题 */
@@ -29,10 +29,10 @@ style: |
 
 ## Introduction
 
-Un **système intelligent** d'assistance environnementale, conçu spécifiquement pour les personnes malvoyantes.
+Un **système** d'assistance environnementale, conçu spécifiquement pour les personnes malvoyantes.
 
-- **Flexibilité du port** :
-  - Intégré directement sur une **canne** blanche.
+- **Possibilité du port** :
+  - Intégré/Accroché sur une **canne** blanche.
   - Ou porté discrètement sur le **torse**.
 
 - **Fonction principale** :
@@ -45,8 +45,8 @@ Un **système intelligent** d'assistance environnementale, conçu spécifiquemen
 
 ### **Matériel (Hardware)**
 - **Cerveau du système** : Raspberry Pi 5
-- **Œil du système** : Module Caméra Raspberry Pi 3
-- **Alimentation** : Batterie portable haute capacité
+- **Œil du système** : Raspberry Pi Camera Module 3
+- **Alimentation** : Batterie 
 
 ### **Application Mobile (Software)**
 - **Plateforme** : Application Android
@@ -72,30 +72,31 @@ Un **système intelligent** d'assistance environnementale, conçu spécifiquemen
 
 ---
 
-## Défis Techniques & Solutions
+## Limitation du Systèmes Actuel
 
-1.  **Poids et Encombrement**
-    - *Solution* : Explorer l'utilisation d'un **ESP32** comme coprocesseur pour alléger la charge du Pi.
-
+1.  **Poids et Encombrement** 
 2.  **Temps de Réaction**
-    - *Solution* : Optimisation du modèle YOLO et utilisation du moteur **NCNN** pour une inférence plus rapide.
+  - Ajoute d'un **ESP32** comme coprocesseur qui traite les images.
+  [**Camera** -- **ESP32** -- **Pi 5**]
+
+  - Remplacer **Pi 5** avec **NVIDIA Jetson Orin Nano**
 
 3.  **Stabilité du Système**
-    - *Solution* : Concevoir une architecture modulaire pour réduire les **points de défaillance uniques**.
 
 4.  **Faisabilité du Modèle Local**
-    - *Défi* : La puissance de calcul du Raspberry Pi 5 est-elle suffisante pour faire tourner un gros modèle localement ?
+  - *Défi* : La puissance de calcul du Raspberry Pi 5 est-elle suffisante ?
 
 5.  **Autonomie Énergétique**
-    - *Défi* : Trouver le juste équilibre entre la **puissance de traitement**, le **poids** de la batterie et l'**autonomie**.
+  - *Défi* : Trouver le juste équilibre entre la **puissance de traitement**, le **poids** de la batterie et l'**autonomie**.
 
 6.  **Stabilité de l'Image**
-    - *Problème* : Vibrations de la caméra dues aux déplacements sur terrain irrégulier.
-    - *Solutions* :
-      - Intégration de **mousses anti-vibrations**.
-      - L'option "porté sur le torse" offre une stabilité naturelle supérieure.
+  - *Problème* : Vibrations de la caméra dues aux déplacements sur terrain irrégulier.
+  - *Solutions* :
+    - Intégration de **mousses anti-vibrations**.
+    - L'option "porté sur le torse" offre une stabilité naturelle supérieure.
 
 ---
+<!-- _class: lead -->
 
 # <!--fit--> Merci pour votre attention
 
