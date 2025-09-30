@@ -3,8 +3,22 @@ marp: true
 theme: gaia
 paginate: true
 style: |
-  h1, h2 { color: #2C3E50; }
-  strong { color: #E74C3C; }
+  /* 全局减小字体大小，解决内容溢出问题 */
+  section {
+    font-size: 20px; /* 默认通常是24px或28px，调小即可 */
+  }
+  /* 保持标题和重点的突出 */
+  h1, h2 { 
+    color: #2C3E50;
+    border-bottom: none !important;
+  }
+  strong { 
+    color: #E74C3C;
+  }
+  /* 确保代码块也不溢出 */
+  pre, code {
+    font-size: 0.9em;
+  }
 ---
 
 # <!--fit--> Système IA Portable d'Assistance Environnementale
