@@ -41,12 +41,21 @@ Un **système intelligent** d'assistance environnementale, conçu spécifiquemen
 
 ---
 
-## Architecture du Système
+## Architecture du Système(1/2) 
 
 ### **Matériel (Hardware)**
 - **Cerveau du système** : Raspberry Pi 5
 - **Œil du système** : Module Caméra Raspberry Pi 3
 - **Alimentation** : Batterie portable haute capacité
+
+### **Application Mobile (Software)**
+- **Plateforme** : Application Android
+- **Fonctionnalité principale** : **Synthèse vocale** hors ligne (TTS)
+- **Format d'échange de données** : **JSON**
+
+---
+
+## Architecture du Système(2/2)  
 
 ### **Intelligence Artificielle (IA)**
 - **Modèle de vision** : **YOLOv11n** (optimisé pour la détection d'objets en temps réel)
@@ -59,10 +68,7 @@ Un **système intelligent** d'assistance environnementale, conçu spécifiquemen
   2. **WebSocket** (communication bidirectionnelle en temps réel)
   3. **HTTP** (simplicité de déploiement)
 
-### **Application Mobile (Software)**
-- **Plateforme** : Application Android
-- **Fonctionnalité principale** : **Synthèse vocale** hors ligne (TTS)
-- **Format d'échange de données** : **JSON**
+
 
 ---
 
