@@ -7,6 +7,8 @@ style: |
   section {
     font-size: 20px; /* 默认通常是24px或28px，调小即可 */
   }
+  section::after {
+    content: attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total);
   /* 保持标题和重点的突出 */
   h1, h2 { 
     color: #2C3E50;
@@ -28,7 +30,15 @@ section {
 
 # <!--fit--> Système IA Portable d'Assistance Environnementale
 
-### *Pour les malvoyants — S'adapte à la canne ou se porte sur le torse*
+### *Pour les malvoyants — S'adapte à la canne ou se porte sur le torse* 
+
+<br><br><br>
+<!-- align: right -->
+这段文字会靠右对齐，而其他内容保持原样。
+<div style="text-align: right;">
+这是靠右对齐的重要说明或注释。
+</div>
+
 
 ---
 
