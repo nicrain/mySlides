@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: uncover
+theme: gaia
 paginate: true
 style: |
   /* 全局减小字体大小，解决内容溢出问题 */
@@ -32,11 +32,6 @@ section {
 
 ---
 
-<style scoped>
-section {
-  display: block !important; /* 关键：重置为默认的 block 布局 */
-}
-</style>
 ## Introduction
 
 Un **système** d'assistance environnementale, conçu spécifiquement pour les personnes malvoyantes.
@@ -51,11 +46,6 @@ Un **système** d'assistance environnementale, conçu spécifiquement pour les p
 
 ---
 
-<style scoped>
-section {
-  display: block !important; /* 关键：重置为默认的 block 布局 */
-}
-</style>
 ## Architecture du Système(1/2) 
 
 ### **Matériel (Hardware)**
@@ -70,11 +60,6 @@ section {
 
 ---
 
-<style scoped>
-section {
-  display: block !important; /* 关键：重置为默认的 block 布局 */
-}
-</style>
 ## Architecture du Système(2/2)  
 
 ### **Intelligence Artificielle (IA)**
@@ -92,11 +77,6 @@ section {
 
 ---
 
-<style scoped>
-section {
-  display: block !important; /* 关键：重置为默认的 block 布局 */
-}
-</style>
 ## Limitation du Systèmes Actuel
 
 1.  **Poids et Encombrement** 
@@ -127,5 +107,4 @@ section {
 
 ### &nbsp;
 
----
 <!-- 下一页恢复正常 -->
