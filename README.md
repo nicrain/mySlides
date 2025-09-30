@@ -22,23 +22,17 @@ style: |
     font-size: 0.9em;
   }
 ---
-<style scoped>
-section {
-  display: block !important; /* 关键：重置为默认的 block 布局 */
-}
-</style>
 
 # <!--fit--> Système IA Portable d'Assistance Environnementale
 
-### *Pour les malvoyants — S'adapte à la canne ou se porte sur le torse* 
+#### *Pour les malvoyants — S'adapte à la canne ou se porte sur le torse* 
 
 <br><br><br>
-<!-- align: right -->
-这段文字会靠右对齐，而其他内容保持原样。
-<div style="text-align: right;">
-这是靠右对齐的重要说明或注释。
-</div>
+&emsp;&emsp;&emsp;&emsp;&emsp; Zhaoyu WANG
+<p style="text-align: right;">这是靠右对齐的一句话</p>
+<span style="float: right;">靠右的文本</span>
 
+<br> <!-- 需要换行恢复布局 -->
 
 ---
 
@@ -56,7 +50,7 @@ Un **système** d'assistance environnementale, conçu spécifiquement pour les p
 
 ---
 
-## Architecture du Système(1/2) 
+## Architecture du Système(1/3) 
 
 ### **Matériel (Hardware)**
 - **Cerveau du système** : Raspberry Pi 5
@@ -70,12 +64,14 @@ Un **système** d'assistance environnementale, conçu spécifiquement pour les p
 
 ---
 
-## Architecture du Système(2/2)  
-
+## Architecture du Système(2/3)  
 ### **Intelligence Artificielle (IA)**
 - **Modèle de vision** : **YOLOv11n** (optimisé pour la détection d'objets en temps réel)
 - **Moteur d'inférence** : **NCNN** (pour une exécution ultra-rapide sur Raspberry Pi)
 
+---
+
+## Architecture du Système(3/3)  
 ### **Communication**
 - **Connexion** : Wi-Fi
 - **Protocoles envisagés** :
@@ -111,10 +107,7 @@ Un **système** d'assistance environnementale, conçu spécifiquement pour les p
     - L'option "porté sur le torse" offre une stabilité naturelle supérieure.
 
 ---
-<!-- _class: lead -->
 
 # <!--fit--> Merci pour votre attention
 
 ### &nbsp;
-
-<!-- 下一页恢复正常 -->
