@@ -1,129 +1,82 @@
-<!--
+---
+marp: true
 theme: gaia
-class:
- - invert
-headingDivider: 2 
 paginate: true
--->
+style: |
+  h1, h2 { color: #2C3E50; }
+  strong { color: #E74C3C; }
+---
 
-<!--
-_class:
- - lead
- - invert
--->
+# <!--fit--> Système IA Portable d'Assistance Environnementale
 
-# Deploy Marp to GitHub Pages
+### *Pour les malvoyants — S'adapte à la canne ou se porte sur le torse*
 
-Presentations to Webpages: Instantly!
+---
 
-## What?
+## Introduction
 
-[Marp](https://marp.app/) lets you create HTML slides from markdown (like this!).
+Un **système intelligent** d'assistance environnementale, conçu spécifiquement pour les personnes malvoyantes.
 
-This presentation is both a [website](https://alexsci.com/marp-to-pages) and a [README.md](https://github.com/ralexander-phi/marp-to-pages/blob/main/README.md).
+- **Flexibilité du port** :
+  - Intégré directement sur une **canne** blanche.
+  - Ou porté discrètement sur le **torse**.
 
-## Why?
+- **Fonction principale** :
+  - Identifier en temps réel les **obstacles** et les **éléments environnementaux** (escaliers, passages piétons, etc.).
+  - Transmettre ces informations par **synthèse vocale**.
 
-Treat your presentation the same way you treat code.
+---
 
-- Use git to track changes
-- Pull requests to collaborate
-- Deploy automatically
-- See a problem? Open an issue!
+## Architecture du Système
 
-## Setup
+### **Matériel (Hardware)**
+- **Cerveau du système** : Raspberry Pi 5
+- **Œil du système** : Module Caméra Raspberry Pi 3
+- **Alimentation** : Batterie portable haute capacité
 
-Want to create your own?
+### **Intelligence Artificielle (IA)**
+- **Modèle de vision** : **YOLOv11n** (optimisé pour la détection d'objets en temps réel)
+- **Moteur d'inférence** : **NCNN** (pour une exécution ultra-rapide sur Raspberry Pi)
 
-First, create a new repo [from the template repo](https://github.com/ralexander-phi/marp-to-pages).
+### **Communication**
+- **Connexion** : Wi-Fi
+- **Protocoles envisagés** :
+  1. **MQTT** (léger et idéal pour l'IoT)
+  2. **WebSocket** (communication bidirectionnelle en temps réel)
+  3. **HTTP** (simplicité de déploiement)
 
-![](img/use-template.png)
+### **Application Mobile (Software)**
+- **Plateforme** : Application Android
+- **Fonctionnalité principale** : **Synthèse vocale** hors ligne (TTS)
+- **Format d'échange de données** : **JSON**
 
-## Configure GitHub Pages
+---
 
-Open your new repo and [setup publishing](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source).
+## Défis Techniques & Solutions
 
-You'll typically use `gh-pages` as the deploy branch.
+1.  **Poids et Encombrement**
+    - *Solution* : Explorer l'utilisation d'un **ESP32** comme coprocesseur pour alléger la charge du Pi.
 
-## Review Build
+2.  **Temps de Réaction**
+    - *Solution* : Optimisation du modèle YOLO et utilisation du moteur **NCNN** pour une inférence plus rapide.
 
-Click on Actions tab and see if the build succeeded (it may take some time).
+3.  **Stabilité du Système**
+    - *Solution* : Concevoir une architecture modulaire pour réduire les **points de défaillance uniques**.
 
-![](img/click-actions.png)
+4.  **Faisabilité du Modèle Local**
+    - *Défi* : La puissance de calcul du Raspberry Pi 5 est-elle suffisante pour faire tourner un gros modèle localement ?
 
-You should now see the generated files in the `gh-pages` branch.
+5.  **Autonomie Énergétique**
+    - *Défi* : Trouver le juste équilibre entre la **puissance de traitement**, le **poids** de la batterie et l'**autonomie**.
 
-## View webpage
+6.  **Stabilité de l'Image**
+    - *Problème* : Vibrations de la caméra dues aux déplacements sur terrain irrégulier.
+    - *Solutions* :
+      - Intégration de **mousses anti-vibrations**.
+      - L'option "porté sur le torse" offre une stabilité naturelle supérieure.
 
-Open your deployed webpage to see the content.
+---
 
-Out of the box you should see `README.md` as `/index.html` and `/README.pdf`. Slides under `docs/` are also converted.
+# <!--fit--> Merci pour votre attention
 
-## Running locally
-
-Locally you'll run commands like:
-
-```
-$ marp README.md -o build/README.pdf
-```
-
-or
-
-```
-$ npx @marp-team/marp-cli@latest README.md -o build/README.pdf
-```
-
-## As a workflow step
-
-The workflow runs an equivalent step:
-
-```
-- name: Marp Build (README.pdf)
-  uses: docker://marpteam/marp-cli:v1.7.0
-  with:
-    args: README.md -o build/README.pdf
-  env:
-    MARP_USER: root:root
-```
-
-Note the `args` match the previous slide.
-
-## Customizing the build
-
-Anything in the `build/` folder will be deployed to GitHub Pages.
-
-You can copy extra files or run further processing steps using other tools.
-
-## Learn more about Marp
-
-This is a good time to learn more about Marp. Here's some resources:
-
-- [CommonMark](https://commonmark.org/)
-- [Cheat Sheet](https://commonmark.org/help/)
-- [Themes](https://github.com/marp-team/marp-core/tree/master/themes)
-- [CSS Themes](https://marpit.marp.app/theme-css)
-- [Directives](https://marpit.marp.app/directives)
-- [VS Code plugin](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
-
-## Example Sites
-
-Known sites using this action are:
-
-- [University of Illinois at Urbana-Champaign's CS 199 Even More Practice](https://cs199emp.netlify.app/) [(code)](https://github.com/harsh183/emp-125)
-- [Exploring agent based models](https://roiarthurb.github.io/Talk-UMMISCO_06-07-2020/) [(code)](https://github.com/RoiArthurB/Talk-UMMISCO_06-07-2020)
-
-Send a [pull request](https://github.com/ralexander-phi/marp-to-pages) to get your site added.
-
-## Publish your slides
-
-When you are ready to share your presentation, commit or merge to `main` and your content on GitHub Pages will automatically update.
-
-# 🎉
-<!--
-_class:
- - lead
- - invert
--->
-### Hooray!
-
-
+### &nbsp;
