@@ -28,10 +28,9 @@ style: |
 <br><br><br>
 <br><br><br>
 <br><br><br>
+<br><br><br>
 
-<div style="text-align: right; margin-right: 100px;">
 Zhaoyu WANG
-</div>
 
 ---
 
