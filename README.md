@@ -7,8 +7,6 @@ style: |
   section {
     font-size: 20px; /* 默认通常是24px或28px，调小即可 */
   }
-  section::after {
-    content: attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total);
   /* 保持标题和重点的突出 */
   h1, h2 { 
     color: #2C3E50;
@@ -27,12 +25,12 @@ style: |
 
 #### *Pour les malvoyants — S'adapte à la canne ou se porte sur le torse* 
 
-<br><br><br>
-&emsp;&emsp;&emsp;&emsp;&emsp; Zhaoyu WANG
-<p style="text-align: right;">这是靠右对齐的一句话</p>
-<span style="float: right;">靠右的文本</span>
 
-<br> <!-- 需要换行恢复布局 -->
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+Zhaoyu WANG
 
 ---
 
@@ -50,7 +48,7 @@ Un **système** d'assistance environnementale, conçu spécifiquement pour les p
 
 ---
 
-## Architecture du Système(1/3) 
+## Architecture du Système(1/2) 
 
 ### **Matériel (Hardware)**
 - **Cerveau du système** : Raspberry Pi 5
@@ -64,14 +62,11 @@ Un **système** d'assistance environnementale, conçu spécifiquement pour les p
 
 ---
 
-## Architecture du Système(2/3)  
+## Architecture du Système(2/2)  
 ### **Intelligence Artificielle (IA)**
 - **Modèle de vision** : **YOLOv11n** (optimisé pour la détection d'objets en temps réel)
 - **Moteur d'inférence** : **NCNN** (pour une exécution ultra-rapide sur Raspberry Pi)
 
----
-
-## Architecture du Système(3/3)  
 ### **Communication**
 - **Connexion** : Wi-Fi
 - **Protocoles envisagés** :
