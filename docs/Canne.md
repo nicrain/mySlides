@@ -2,50 +2,109 @@
 marp: true
 theme: gaia
 paginate: true
+style: |
+  section {
+    font-size: 20px; 
+  }
+  h1, h2 { 
+    color: #2C3E50;
+    border-bottom: none !important;
+  }
+  strong { 
+    color: #E74C3C;
+  }
+  pre, code {
+    font-size: 0.9em;
+  }
+  section::after {
+    content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+  }
+---
+
+# <!--fit--> Système IA Portable d'Assistance Environnementale
+
+#### *Pour les malvoyants — adaptable à la canne ou portable sur le torse*
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+<div style="text-align: right; margin-right: 100px;">
+Zhaoyu WANG
+</div>
 
 ---
 
-# Système IA Portable d'Assistance Environnementale
-## <!---fit---> *Pour les malvoyants, s'adapte à la canne ou se porte sur le torse*
----
+## Introduction
 
-# Introduction
+Un **système** d'assistance environnementale, conçu spécifiquement pour les personnes malvoyantes.
 
-- un system
-- canne ou torse
-- 
----
+- **Modalités de portage** :
+  - Intégré ou fixé sur une **canne** blanche
+  - Ou porté discrètement sur le **torse**
 
-# Architecture
-
-- Hardware:
-  - Raspberry Pi 5
-  - Raspberry Pi Camera Module 3
-- AI Model:
-  - YOLOv11n(Pour l'identification des images)
-    - NCNN
-- Telecommunication:
-  - WIFI
-    1. MQTT
-    2. WebSocket
-    3. HTTP
-- Software:
-  - Android APP
-    - 语音播报: Text -> Audio(Offline TTS engine)
-    - Format des données: JSON
+- **Fonction principale** :
+  - Identifier en temps réel les **obstacles** et **éléments environnementaux** (escaliers, passages piétons, etc.).
+  - Transmettre ces informations par **synthèse vocale**
 
 ---
 
-# Défis
-1. Lourd(ESP32??, Raspberry Pi, Caméra, Batterie)
-2. Temps react
-3. Stabilité
-   - Beaucoup d'equipements, 单点故障率增加
-4. Local big model est realisable?
-5. Égilibre entre le poids et la durée de batterie
-6. Vibration de caméra à cause de le terrain pas plat
-   - 加入减震海绵
-   - 佩带在胸前
+## Architecture du Système (1/2)
+
+### **Matériel (Hardware)**
+- **Cerveau du système** : Raspberry Pi 5
+- **Œil du système** : Module caméra Raspberry Pi 3
+- **Alimentation** : Batterie portable
+
+### **Application Mobile (Software)**
+- **Plateforme** : Application Android
+- **Fonctionnalité principale** : **Synthèse vocale** hors ligne(TTS)
+- **Format d'échange** : **JSON**
 
 ---
-# Merci
+
+## Architecture du Système (2/2)
+
+### **Intelligence Artificielle (IA)**
+- **Modèle de vision** : **YOLOv11n** (optimisé pour la détection en temps réel)
+- **Moteur d'inférence** : **NCNN** (exécution accélérée sur Raspberry Pi)
+
+### **Communication**
+- **Connexion** : Wi-Fi
+- **Protocoles envisagés** :
+  1. **MQTT** (léger, idéal pour l'IoT)
+  2. **WebSocket** (communication bidirectionnelle temps réel)
+  3. **HTTP** (simplicité de déploiement)
+
+---
+
+## Limitations du Système Actuel
+
+1.  **Poids et encombrement**
+    - *Solution envisagée* : Optimisation de l'ergonomie
+
+2.  **Temps de réaction**
+    - *Solutions potentielles* :
+      - Ajout d'un **ESP32** comme coprocesseur de traitement d'image: [**Camera** -- **ESP32** -- **Pi 5**]
+      - Remplacement par **NVIDIA Jetson Orin Nano**
+
+3.  **Stabilité du système**
+    - Architecture à renforcer contre les points de défaillance uniques
+
+4.  **Faisabilité du modèle local**
+    - *Question* : La puissance de calcul du Pi 5 est-elle suffisante ?
+
+5.  **Autonomie énergétique**
+    - *Défi* : Équilibre entre **performance**, **poids** et **autonomie**
+
+6.  **Stabilité de l'image**
+    - *Problème* : Vibrations en milieu extérieur
+    - *Solutions* :
+      - **Mousses anti-vibrations**
+      - **Portage sur le torse** 
+
+---
+
+# <!--fit--> Merci pour votre attention
+
+### Questions ?
