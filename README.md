@@ -96,7 +96,13 @@ Un **système** d'assistance environnementale, conçu spécifiquement pour les p
     - L'option "porté sur le torse" offre une stabilité naturelle supérieure.
 
 ---
-<!-- _class: lead -->
+<style scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 垂直居中 */
+}
+</style>
 
 # <!--fit--> Merci pour votre attention
 
