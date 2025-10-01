@@ -36,15 +36,15 @@ Zhaoyu WANG
 
 ## Introduction
 
-Un **système** d'assistance environnementale, conçu spécifiquement pour les personnes malvoyantes.
+Ce projet a pour objectif de développer un **système d'assistance** qui offre aux personnes malvoyantes une meilleure perception de leur environnement
 
-- **Modalités de portage** :
-  - Intégré ou fixé sur une **canne** blanche
-  - Ou porté discrètement sur le **torse**
+- **Que fait-il ?**
+  - Il identifie en temps réel les **obstacles** (poubelles, poteaux) et les **risques** (escaliers, trottoirs).
+  - Il fournit des **descriptions audio** via une synthèse vocale, pour une navigation autonome et sécurisée.
 
-- **Fonction principale** :
-  - Identifier en temps réel les **obstacles** et **éléments environnementaux** (escaliers, passages piétons, etc.).
-  - Transmettre ces informations par **synthèse vocale**
+- **Comment ça marche ? (Modalités de portage)**
+  - Le système peut être **intégré à une canne** blanche classique.
+  - Ou être **porté de manière discrète** sur le torse.
 
 ---
 
@@ -77,7 +77,7 @@ Un **système** d'assistance environnementale, conçu spécifiquement pour les p
 
 ---
 
-## Limitations du Système Actuel
+## Limitations du Système Actuel(1/2)
 
 1.  **Poids et encombrement**
     - *Solution envisagée* : Optimisation de l'ergonomie
@@ -93,6 +93,10 @@ Un **système** d'assistance environnementale, conçu spécifiquement pour les p
 4.  **Faisabilité du modèle local**
     - *Question* : La puissance de calcul du Pi 5 est-elle suffisante ?
 
+---
+
+## Limitations du Système Actuel(2/2)
+
 5.  **Autonomie énergétique**
     - *Défi* : Équilibre entre **performance**, **poids** et **autonomie**
 
@@ -101,6 +105,8 @@ Un **système** d'assistance environnementale, conçu spécifiquement pour les p
     - *Solutions* :
       - **Mousses anti-vibrations**
       - **Portage sur le torse** 
+7. **Intégration sur la canne**
+   - *Problème* : Il est nécessaire de concevoir un mécanisme fiable et discret pour fixer le système sur une canne blanche.
 
 ---
 
